@@ -29,7 +29,11 @@ provider:
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
-
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "kms:Decrypt"
+      Resource: "arn:aws:kms:eu-west-2:245879739180:key/987e3e0e-63fa-4231-a371-4464bc001aeb"
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
 #    - Effect: "Allow"
